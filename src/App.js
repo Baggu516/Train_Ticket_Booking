@@ -54,19 +54,22 @@ export const store=createContext()
 //....................
 
 function App() {
+  const inputRef = React.useRef(null);
   const [search,setSearch]=useState("")
   const [tata,setTata]=useState(Data?.rows)
   const [bookedData,setBookedData] = useState([])
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
+    inputRef.current.value = ""
     setValue(newValue);
   };
   const stored=(data)=>{
     setBookedData(data)
     setValue(1)
   }
-
+  const [searchData,setSearchData] = useState([]);
+  const [searchValue,setSearchValue] = useState();
   const Search=(event)=>{
     event?.preventDefault()
     if(value==0){
@@ -76,10 +79,11 @@ function App() {
         let filterData = data.filter((item)=>{
           return item.trainName.toLowerCase().includes(inputFilterData.toLowerCase()) ||item.sourcetime.toLowerCase().includes(inputFilterData.toLowerCase())
         })
-        setValue(0)
+        setSearchData([...filterData])
         return filterData
       }
       else{
+        setSearchData([...tata])
         return tata
       }
     }
@@ -87,22 +91,23 @@ function App() {
       if(event){
         let inputFilterData = event.target.value
         let filterData = bookedData.filter((item)=>{
-          return item.trainName.toLowerCase()===inputFilterData.toLowerCase() ||item.sourcetime.toLowerCase()===inputFilterData.toLowerCase()
+          return item.trainName.toLowerCase().includes(inputFilterData.toLowerCase()) ||item.sourcetime.toLowerCase().includes(inputFilterData.toLowerCase())
         })
-        setValue(1)
+        setSearchData([...filterData])
         return filterData
       }
       else{
+        setSearchData([...bookedData])
         return bookedData
       }
     }
   }
-  console.log("🚀 ~ file: App.js ~ line 98 ~ Search ~ bookedData", Search())
   
 
   React.useEffect(()=>{
     setTata(Data?.rows)
-  },[])
+    Search()
+  },[value])
   
   return (
     <>
@@ -131,18 +136,19 @@ function App() {
           <InputBase
             sx={{ ml: 1, flex: 1 }}
             placeholder="Search For Data"
+            value={searchValue} 
+            inputRef={inputRef}
             style={{borderBottom:'1px solid black',width:'25vw'}}
             onChange={(e)=>e?Search(e):null}
           />  
         </span>
         </span>
       </Box>
-      <TabPanel value={value} onClick={()=>setTata([...Data?.rows])} index={0}>
-        <TotalTicket value={value} tata={Search()} bookedData={bookedData} stored={stored}/>
-       { console.log("🚀 ~ file: App.js ~ line 138 ~ App ~ Search()", Search())}
+      <TabPanel value={value} index={0}>
+        <TotalTicket value={value} availableData={searchData} bookedData={bookedData} stored={stored}/>
       </TabPanel>
-      <TabPanel value={value} index={1}>
-        <TotalTicket value={value} bookedData={Search()} stored={stored} />
+      <TabPanel value={value}   index={1}>
+        <TotalTicket value={value} bookedData={searchData} stored={stored} />
       </TabPanel>
     </Box>
       </Container>

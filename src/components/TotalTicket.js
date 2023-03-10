@@ -14,7 +14,7 @@ import { Button, Container, Divider, IconButton, Toolbar } from '@mui/material';
 export default function DataTable(props) {
   const [n,setN]=useState(0)
   const [open, setOpen] =useState(false)
-  const [availableData,setAvailableData] = useState(props.tata)
+  const [availableData,setAvailableData] = useState(props.availableData)
 
   const handleClose = () => {
     setOpen(false);
@@ -69,11 +69,11 @@ useEffect(()=>{
     phoneNumber:"",
   })
   if(props.value==0){
-    setAvailableData([...props?.tata]);setBooked([...props?.bookedData])
+    setAvailableData([...props?.availableData]);
+    setBooked([...props?.bookedData])
   }
   else{setBooked([...props?.bookedData])};
-},[n,props.tata,props?.bookedData])
-console.log("🚀 ~ file: TotalTicket.js ~ line 76 ~ DataTable ~ props.tata", props.tata)
+},[n,props.availableData,props?.bookedData])
   return (
     <div style={{ height: 400, width: '100%' }}>
       {props.value==0&&<DataGrid
