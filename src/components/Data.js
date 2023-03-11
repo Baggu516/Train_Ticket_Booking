@@ -7,7 +7,7 @@ const Data={
         { id: 5, trainName: 'sapthagiri', source: 'kalikiri', destination: "Tamilnadu",sourcetime:"10:30 am" ,endingtime:"4:30 pm",price:240,date:"15-03-2023"},
         { id: 6, trainName: 'kachi', source: 'renigunta', destination: "chittor",sourcetime:"9:30 am" ,endingtime:"1:30 pm",price:240,date:"15-03-2023"  },
         { id: 8, trainName: 'Kavi Guru Express', source: 'madanapalle', destination: "Bangalore" ,sourcetime:"7:30 am" ,endingtime:"1:30 pm",price:840,date:"15-03-2023" },
-        { id: 9, trainName: ' Kranti Express', source: 'kakinada', destination: "goa",sourcetime:"10:30 am" ,endingtime:"1:30 pm",price:40 ,date:"15-03-2023" },
+        { id: 9, trainName: 'Kranti Express', source: 'kakinada', destination: "goa",sourcetime:"10:30 am" ,endingtime:"1:30 pm",price:40 ,date:"15-03-2023" },
         { id: 10, trainName: 'Malayam', source: 'chennai', destination: "madhyapradesh",sourcetime:"11:30 am" ,endingtime:"1:30 pm",price:440 ,date:"15-03-2023" },
       
       ],
