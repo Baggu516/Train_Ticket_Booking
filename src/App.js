@@ -78,7 +78,7 @@ function App() {
         let inputFilterData = event.target.value
         let data = tata
         let filterData = data.filter((item)=>{
-          return item.date.toLowerCase().includes(inputFilterData.toLowerCase()) ||item.source.toLowerCase().includes(inputFilterData.toLowerCase()) || item.destination.toLowerCase().includes(inputFilterData.toLowerCase())
+          return item.endingtime.toLowerCase().includes(inputFilterData.toLowerCase()) || item.sourcetime.toLowerCase().includes(inputFilterData.toLowerCase()) || item.trainName.toLowerCase().includes(inputFilterData.toLowerCase()) || item.date.toLowerCase().includes(inputFilterData.toLowerCase()) ||item.source.toLowerCase().includes(inputFilterData.toLowerCase()) || item.destination.toLowerCase().includes(inputFilterData.toLowerCase()) || item.price.toString().includes(inputFilterData)
         })
         setSearchData([...filterData])
         return filterData
@@ -92,7 +92,7 @@ function App() {
       if(event){
         let inputFilterData = event.target.value
         let filterData = bookedData.filter((item)=>{
-          return item.date.toLowerCase().includes(inputFilterData.toLowerCase()) ||item.source.toLowerCase().includes(inputFilterData.toLowerCase()) || item.destination.toLowerCase().includes(inputFilterData.toLowerCase())
+          return item.phoneNumber.toLowerCase().includes(inputFilterData.toLowerCase()) || item.email.toLowerCase().includes(inputFilterData.toLowerCase()) || item.name.toLowerCase().includes(inputFilterData.toLowerCase()) || item.endingtime.toLowerCase().includes(inputFilterData.toLowerCase()) || item.sourcetime.toLowerCase().includes(inputFilterData.toLowerCase()) || item.trainName.toLowerCase().includes(inputFilterData.toLowerCase()) || item.date.toLowerCase().includes(inputFilterData.toLowerCase()) ||item.source.toLowerCase().includes(inputFilterData.toLowerCase()) || item.destination.toLowerCase().includes(inputFilterData.toLowerCase()) || item.price.toString().includes(inputFilterData)
         })
         setSearchData([...filterData])
         return filterData
@@ -152,9 +152,9 @@ function App() {
         <TotalTicket value={value} bookedData={searchData} stored={stored} />
       </TabPanel>
     </Box>
-    <div className="footer">
-    <Model/>
-    </div>
+    <span className="footer">
+      <Model/>
+    </span>
    
       </Container>
       

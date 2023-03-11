@@ -2,12 +2,12 @@ import React,{useState} from 'react'
 
 const Model = () => {
   return (
-    <div>
-     <center>
+    <>
+     <center style={{  color:'white',backgroundColor: 'black'}}>
      <h2>@infobellit-Coding Assessment</h2>
      </center>
    
-    </div>
+    </>
   )
 }
 

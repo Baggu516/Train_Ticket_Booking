@@ -1,14 +1,14 @@
 const Data={
     rows:[
-        { id: 1, trainName: 'Snow', source: 'vayalpadu', destination: "madanapalle",sourcetime:"8:30 am" ,endingtime:"6:30 pm",price:140,date:"12/3/23"},
-        { id: 2, trainName: 'Bingo', source: 'Jon', destination: "vayalpaduz",sourcetime:"1:30 am" ,endingtime:"1:30 pm",price:260,date:"15/3/23"},
-        { id: 3, trainName: 'Venkatadhri', source: 'Rajam', destination: "madanapalle",sourcetime:"7:30 am" ,endingtime:"5:30 pm",price:240 ,date:"20/3/23"},
-        { id: 4, trainName: 'Namkya', source: 'anathapuram', destination: "angallu",sourcetime:"11:30 am" ,endingtime:"1:30 pm",price:540,date:"27/3/23" },
-        { id: 5, trainName: 'sapthagiri', source: 'kalikiri', destination: "xyz",sourcetime:"10:30 am" ,endingtime:"4:30 pm",price:240,date:"15/3/23"},
-        { id: 6, trainName: 'kachi', source: 'renigunta', destination: "chittor",sourcetime:"9:30 am" ,endingtime:"1:30 pm",price:240,date:"15/3/23"  },
-        { id: 8, trainName: 'Holywood', source: 'Jon', destination: "hlo" ,sourcetime:"7:30 am" ,endingtime:"1:30 pm",price:840,date:"15/3/23" },
-        { id: 9, trainName: 'Tollywood', source: 'Jon', destination: "xyz",sourcetime:"10:30 am" ,endingtime:"1:30 pm",price:40 ,date:"15/3/23" },
-        { id: 10, trainName: 'Malayam', source: 'Jon', destination: "xyz",sourcetime:"11:30 am" ,endingtime:"1:30 pm",price:440 ,date:"15/3/23" },
+        { id: 1, trainName: 'Snow', source: 'vayalpadu', destination: "madanapalle",sourcetime:"8:30 am" ,endingtime:"6:30 pm",price:140,date:"12-03-2023"},
+        { id: 2, trainName: 'Bingo', source: 'Jon', destination: "vayalpaduz",sourcetime:"1:30 am" ,endingtime:"1:30 pm",price:260,date:"15-03-2023"},
+        { id: 3, trainName: 'Venkatadhri', source: 'Rajam', destination: "madanapalle",sourcetime:"7:30 am" ,endingtime:"5:30 pm",price:240 ,date:"20-03-2023"},
+        { id: 4, trainName: 'Namkya', source: 'anathapuram', destination: "angallu",sourcetime:"11:30 am" ,endingtime:"1:30 pm",price:540,date:"27-03-2023" },
+        { id: 5, trainName: 'sapthagiri', source: 'kalikiri', destination: "xyz",sourcetime:"10:30 am" ,endingtime:"4:30 pm",price:240,date:"15-03-2023"},
+        { id: 6, trainName: 'kachi', source: 'renigunta', destination: "chittor",sourcetime:"9:30 am" ,endingtime:"1:30 pm",price:240,date:"15-03-2023"  },
+        { id: 8, trainName: 'Holywood', source: 'Jon', destination: "hlo" ,sourcetime:"7:30 am" ,endingtime:"1:30 pm",price:840,date:"15-03-2023" },
+        { id: 9, trainName: 'Tollywood', source: 'Jon', destination: "xyz",sourcetime:"10:30 am" ,endingtime:"1:30 pm",price:40 ,date:"15-03-2023" },
+        { id: 10, trainName: 'Malayam', source: 'Jon', destination: "xyz",sourcetime:"11:30 am" ,endingtime:"1:30 pm",price:440 ,date:"15-03-2023" },
       
       ],
     columns: [
