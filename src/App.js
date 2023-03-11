@@ -14,6 +14,7 @@ import { Button, Container,TextField, Divider, IconButton, Toolbar, InputBase } 
 import SearchIcon from '@mui/icons-material/Search';
 import Data from "./components/Data"
 // import TotalTicket from "./components/TotalTicket"
+import Model from './components/Model';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -77,7 +78,7 @@ function App() {
         let inputFilterData = event.target.value
         let data = tata
         let filterData = data.filter((item)=>{
-          return item.trainName.toLowerCase().includes(inputFilterData.toLowerCase()) ||item.sourcetime.toLowerCase().includes(inputFilterData.toLowerCase())
+          return item.date.toLowerCase().includes(inputFilterData.toLowerCase()) ||item.source.toLowerCase().includes(inputFilterData.toLowerCase()) || item.destination.toLowerCase().includes(inputFilterData.toLowerCase())
         })
         setSearchData([...filterData])
         return filterData
@@ -91,7 +92,7 @@ function App() {
       if(event){
         let inputFilterData = event.target.value
         let filterData = bookedData.filter((item)=>{
-          return item.trainName.toLowerCase().includes(inputFilterData.toLowerCase()) ||item.sourcetime.toLowerCase().includes(inputFilterData.toLowerCase())
+          return item.date.toLowerCase().includes(inputFilterData.toLowerCase()) ||item.source.toLowerCase().includes(inputFilterData.toLowerCase()) || item.destination.toLowerCase().includes(inputFilterData.toLowerCase())
         })
         setSearchData([...filterData])
         return filterData
@@ -151,6 +152,10 @@ function App() {
         <TotalTicket value={value} bookedData={searchData} stored={stored} />
       </TabPanel>
     </Box>
+    <div className="footer">
+    <Model/>
+    </div>
+   
       </Container>
       
       {/* <store.Provider value={globaldata}>
